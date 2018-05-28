@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201805281019009_CreatingGenreAndAddingGenreRelationToMovie.Designer.cs">
       <DependentUpon>201805281019009_CreatingGenreAndAddingGenreRelationToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805281025175_AddingDataAnnotationsToMovieandGenre.cs" />
+    <Compile Include="Migrations\201805281025175_AddingDataAnnotationsToMovieandGenre.Designer.cs">
+      <DependentUpon>201805281025175_AddingDataAnnotationsToMovieandGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -336,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805281019009_CreatingGenreAndAddingGenreRelationToMovie.resx">
       <DependentUpon>201805281019009_CreatingGenreAndAddingGenreRelationToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281025175_AddingDataAnnotationsToMovieandGenre.resx">
+      <DependentUpon>201805281025175_AddingDataAnnotationsToMovieandGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
