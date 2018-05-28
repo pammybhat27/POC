@@ -53,9 +53,14 @@ namespace POC.Controllers
             var movies = _context.Movies.Include(m => m.Genre).ToList();
 
             return View(movies);
-        }             
+        }
 
+        public ActionResult Details(int id)
+        {
+            var movies = _context.Movies.Include(g => g.Genre).SingleOrDefault(m=>m.Id== id);
 
+            return View(movies);
+        }
 
         private IEnumerable<Movie> GetMovies()
         {
