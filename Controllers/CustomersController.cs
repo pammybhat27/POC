@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using POC.Models;
+using POC.ViewModels;
 
 namespace POC.Controllers
 {
@@ -26,9 +27,18 @@ namespace POC.Controllers
         }
 
 
-        public ActionResult New() {
-            
-            return View();
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+
+
+            var viewModel = new CustomerFormViewModel
+            {
+
+                MembershipTypes = membershipTypes
+            };
+
+            return View("CustomerForm",viewModel);
         }
 
        
