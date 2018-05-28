@@ -25,6 +25,13 @@ namespace POC.Controllers
             return View(customers);
         }
 
+
+        public ActionResult New() {
+
+            return View();
+        }
+
+       
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
