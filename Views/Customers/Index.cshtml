@@ -10,12 +10,14 @@
     <thead>
         <tr>
             <th>Customer</th>
+            <th>MemberShip Type</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var customer in Model) {
             <tr>
                 <td>@customer.Name</td>
+                <td>@customer.MembershipType.Name</td>
             </tr>
         }
     </tbody>
