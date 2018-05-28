@@ -48,6 +48,9 @@ namespace POC.Controllers
         }
 
 
+   
+
+
         public ActionResult Index()
         {
             var movies = _context.Movies.Include(m => m.Genre).ToList();
