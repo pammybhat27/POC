@@ -56,6 +56,18 @@ namespace POC.Controllers
             return View(customer);
         
         }
-      
+
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if (customer == null)
+                return HttpNotFound();
+
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Customers");
+
+        }
     }
 }
