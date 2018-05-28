@@ -9,23 +9,26 @@ namespace POC.Controllers
 {
     public class CustomersController : Controller
     {
+        private ApplicationDbContext _context;
+
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = GetCustomers();
+            var customers = _context.Customers.ToList();
 
             return View(customers);
         }
 
-
-
-        private IEnumerable<Customer> GetCustomers()
+        protected override void Dispose(bool disposing)
         {
-            return new List<Customer>
-            {
-                new Customer {Name = "han"},
-                new Customer {Name = "Pammy"}
-            };
+            _context.Dispose();
         }
+
+      
     }
 }
