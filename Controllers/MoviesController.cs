@@ -31,5 +31,24 @@ namespace POC.Controllers
             return View(viewModel);
 ;
         }
+
+
+        public ActionResult Index()
+        {
+            var movies = GetMovies();
+            return View(movies);
+        }             
+
+
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie { Name = "Shrek 1" },
+                new Movie { Name = "Wall E 2" }
+            };
+        }
+
     }
 }
