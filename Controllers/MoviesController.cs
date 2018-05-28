@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +12,20 @@ namespace POC.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
+
+        public ApplicationDbContext _context;
+
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek!" };
@@ -35,7 +50,8 @@ namespace POC.Controllers
 
         public ActionResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+
             return View(movies);
         }             
 
