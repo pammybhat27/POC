@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201805281005551_AddingPropertiesToMovie.Designer.cs">
       <DependentUpon>201805281005551_AddingPropertiesToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805281012421_AddingPropertiesToMovie1.cs" />
+    <Compile Include="Migrations\201805281012421_AddingPropertiesToMovie1.Designer.cs">
+      <DependentUpon>201805281012421_AddingPropertiesToMovie1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805281005551_AddingPropertiesToMovie.resx">
       <DependentUpon>201805281005551_AddingPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805281012421_AddingPropertiesToMovie1.resx">
+      <DependentUpon>201805281012421_AddingPropertiesToMovie1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
