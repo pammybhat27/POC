@@ -13,5 +13,10 @@ namespace POC.Models {
         public DateTime ReleaseDate { get; set; }
 
         public byte NumberInStock { get; set; }
+
+
+        public Genre Genre { get; set; }
+
+        public byte GenreId { get; set; }
     }
 }
