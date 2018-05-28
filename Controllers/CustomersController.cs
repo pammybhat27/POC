@@ -60,10 +60,20 @@ namespace POC.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
-            if (customer == null)
-                return HttpNotFound();
+            if (customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id== customer.Id);
+                customerInDb.Name = customer.Name;
+                customerInDb.BirthDate = customer.BirthDate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
 
-            _context.Customers.Add(customer);
+
+            }
+
+
             _context.SaveChanges();
 
             return RedirectToAction("Index","Customers");
