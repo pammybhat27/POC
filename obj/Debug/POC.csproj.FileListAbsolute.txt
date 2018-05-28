@@ -67,3 +67,5 @@ c:\users\pammy\documents\visual studio 2015\Projects\POC\POC\bin\Microsoft.Owin.
 c:\users\pammy\documents\visual studio 2015\Projects\POC\POC\obj\Debug\POC.csprojResolveAssemblyReference.cache
 c:\users\pammy\documents\visual studio 2015\Projects\POC\POC\obj\Debug\POC.dll
 c:\users\pammy\documents\visual studio 2015\Projects\POC\POC\obj\Debug\POC.pdb
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.InitialModel.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.csproj.GenerateResource.Cache
