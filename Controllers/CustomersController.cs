@@ -30,6 +30,15 @@ namespace POC.Controllers
             _context.Dispose();
         }
 
+        public ActionResult Details(int id) {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
+        
+        }
       
     }
 }
