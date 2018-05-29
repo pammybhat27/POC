@@ -81,3 +81,10 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migra
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.CreatingGenreAndAddingGenreRelationToMovie.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingDataAnnotationsToMovieandGenre.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingDataAnotationstoMovie.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingDataAnotationstoMovies.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.uptoSpeed.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.uptoSpeed1.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.Downgrade.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.Downgrading.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingMovie.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingGenreRelationToMovie.resources
