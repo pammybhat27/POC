@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +255,10 @@
     <Compile Include="Migrations\201805290324556_AddingGenreRelationToMovie.Designer.cs">
       <DependentUpon>201805290324556_AddingGenreRelationToMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805290420506_AddingMovieName.cs" />
+    <Compile Include="Migrations\201805290420506_AddingMovieName.Designer.cs">
+      <DependentUpon>201805290420506_AddingMovieName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -325,6 +330,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -397,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805290324556_AddingGenreRelationToMovie.resx">
       <DependentUpon>201805290324556_AddingGenreRelationToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805290420506_AddingMovieName.resx">
+      <DependentUpon>201805290420506_AddingMovieName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
