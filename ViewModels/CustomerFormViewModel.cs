@@ -16,9 +16,9 @@ namespace POC.ViewModels {
             get
             {
                 if (Customer!= null && Customer.Id != 0)
-                    return "Edit Movie";
+                    return "Edit Customer";
 
-                return "New Movie";
+                return "New Customer";
             }
         }
 
