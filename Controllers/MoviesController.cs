@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using POC.Models;
+using POC.ViewModels;
 
 namespace POC.Controllers
 {
@@ -25,6 +26,21 @@ namespace POC.Controllers
         }
 
 
+        public ActionResult New()
+        {
+            var Genres = _context.Genres.ToList();
+
+
+            var viewModel = new MovieFormViewModel
+            {
+
+                Genre = Genres
+            };
+
+            return View("MovieForm",viewModel);
+        }
+
+
         // GET: Movies
         public ActionResult Index()
         {
@@ -32,6 +48,23 @@ namespace POC.Controllers
 
             return View(movies);
            
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movies = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movies == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movies,
+                Genre = _context.Genres.ToList()
+
+            };
+
+            return View("MovieForm",viewModel);
         }
     }
 }
