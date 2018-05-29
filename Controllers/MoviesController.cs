@@ -50,6 +50,40 @@ namespace POC.Controllers
            
         }
 
+
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+
+            
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.DateReleased = movie.DateReleased;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+
+
+            }
+
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Movies");
+
+        }
+
+
+
+
+
         public ActionResult Edit(int id)
         {
             var movies = _context.Movies.SingleOrDefault(c => c.Id == id);
