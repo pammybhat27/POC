@@ -7,7 +7,7 @@ using System.Web;
 namespace POC.ViewModels {
     public class MovieFormViewModel {
         public IEnumerable<Genre> Genres { get; set; }
-        public Movie Movies;
+        public Movie Movie;
 
     }
 }

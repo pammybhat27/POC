@@ -47,7 +47,17 @@ namespace POC.Controllers
 ;
         }
 
+        public ViewResult New()
+        {
+            var genres = _context.Genres.ToList();
 
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+        }
    
 
 
