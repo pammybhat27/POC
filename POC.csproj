@@ -259,6 +259,14 @@
     <Compile Include="Migrations\201805290420506_AddingMovieName.Designer.cs">
       <DependentUpon>201805290420506_AddingMovieName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805292253513_MakingNameFieldMandatoryMembershipType.cs" />
+    <Compile Include="Migrations\201805292253513_MakingNameFieldMandatoryMembershipType.Designer.cs">
+      <DependentUpon>201805292253513_MakingNameFieldMandatoryMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805292259560_MakingNameFieldMandatoryMembershipTypeRemoval.cs" />
+    <Compile Include="Migrations\201805292259560_MakingNameFieldMandatoryMembershipTypeRemoval.Designer.cs">
+      <DependentUpon>201805292259560_MakingNameFieldMandatoryMembershipTypeRemoval.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -409,6 +417,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805290420506_AddingMovieName.resx">
       <DependentUpon>201805290420506_AddingMovieName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805292253513_MakingNameFieldMandatoryMembershipType.resx">
+      <DependentUpon>201805292253513_MakingNameFieldMandatoryMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805292259560_MakingNameFieldMandatoryMembershipTypeRemoval.resx">
+      <DependentUpon>201805292259560_MakingNameFieldMandatoryMembershipTypeRemoval.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

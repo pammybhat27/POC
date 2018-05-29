@@ -19,8 +19,7 @@ namespace POC.Models {
 
               var age = DateTime.Now.Year - customer.BirthDate.Value.Year;
 
-
-                return (age>= 18)? ValidationResult.Success:new ValidationResult("Customer should be at least 18 years old to go on membership ");
+            return (age>= 18)? ValidationResult.Success:new ValidationResult("Customer should be at least 18 years old to go on membership ");
                     
             
 
