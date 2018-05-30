@@ -53,8 +53,21 @@ namespace POC.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+                    Genre = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+            }
+
+
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
@@ -91,9 +104,9 @@ namespace POC.Controllers
             if (movies == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movies)
             {
-                Movie = movies,
+               
                 Genre = _context.Genres.ToList()
 
             };
