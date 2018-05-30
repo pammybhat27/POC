@@ -271,6 +271,14 @@
     <Compile Include="Migrations\201805300104280_AddingValidations.Designer.cs">
       <DependentUpon>201805300104280_AddingValidations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805300130379_AddingValidationsFail.cs" />
+    <Compile Include="Migrations\201805300130379_AddingValidationsFail.Designer.cs">
+      <DependentUpon>201805300130379_AddingValidationsFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805300136079_GenrenadmOvieAnnotations.cs" />
+    <Compile Include="Migrations\201805300136079_GenrenadmOvieAnnotations.Designer.cs">
+      <DependentUpon>201805300136079_GenrenadmOvieAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -430,6 +438,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805300104280_AddingValidations.resx">
       <DependentUpon>201805300104280_AddingValidations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805300130379_AddingValidationsFail.resx">
+      <DependentUpon>201805300130379_AddingValidationsFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805300136079_GenrenadmOvieAnnotations.resx">
+      <DependentUpon>201805300136079_GenrenadmOvieAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
