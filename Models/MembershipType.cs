@@ -10,7 +10,7 @@ namespace POC.Models {
         public short SignUpFee { get; set; }
         public byte DurationInMonths { get; set; }
         public byte DiscountRate { get; set; }
-
+        [Required]
         public string Name { get; set; }
 
         public static readonly byte Unknown = 0;

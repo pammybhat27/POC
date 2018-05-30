@@ -91,3 +91,4 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migra
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingMovieName.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.MakingNameFieldMandatoryMembershipType.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.MakingNameFieldMandatoryMembershipTypeRemoval.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingValidations.resources

@@ -58,9 +58,11 @@ namespace POC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-           
+
+
 
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
