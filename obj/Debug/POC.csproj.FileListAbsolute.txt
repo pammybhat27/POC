@@ -100,3 +100,5 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Net.Http.Formatting.xml
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.xml
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.WebHost.xml
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\AutoMapper.dll
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\AutoMapper.xml
