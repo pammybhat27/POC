@@ -37,17 +37,18 @@ namespace POC.Controllers.Api
 
         //POST /api/customerDto
         [HttpPost]
-        public Customer CreateCustomer(CustomerDto customerDto)
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
-            if(!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+            if (!ModelState.IsValid)
+                return BadRequest();
 
             var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
 
             _context.Customers.Add(customer);
             _context.SaveChanges();
 
-            return customer;
+            customerDto.Id = customer.Id;
+            return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
         //PUT /api/customers/1
