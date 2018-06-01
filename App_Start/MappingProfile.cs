@@ -13,7 +13,8 @@ namespace POC.App_Start {
         public MappingProfile()
         {
             Mapper.CreateMap<Customer,CustomerDto>();
-            Mapper.CreateMap<CustomerDto,Customer>();
+            Mapper.CreateMap<CustomerDto,Customer>().ForMember(m=>m.Id,opt=>opt.Ignore());	;
+
 }
      
 
