@@ -94,3 +94,9 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migra
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingValidations.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingValidationsFail.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.GenrenadmOvieAnnotations.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Net.Http.Formatting.dll
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.dll
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.WebHost.dll
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Net.Http.Formatting.xml
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.xml
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\System.Web.Http.WebHost.xml

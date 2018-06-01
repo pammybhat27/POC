@@ -7,10 +7,8 @@ using System.Data.Entity;
 using POC.Models;
 using POC.ViewModels;
 
-namespace POC.Controllers
-{
-    public class MoviesController : Controller
-    {
+namespace POC.Controllers {
+    public class MoviesController : Controller {
 
         private ApplicationDbContext _context;
 
@@ -20,47 +18,40 @@ namespace POC.Controllers
         }
 
 
-        protected override void Dispose(bool disposing)
-        {
+        protected override void Dispose(bool disposing) {
             _context.Dispose();
         }
 
 
-        public ActionResult New()
-        {
+        public ActionResult New() {
             var Genres = _context.Genres.ToList();
 
 
-            var viewModel = new MovieFormViewModel
-            {
+            var viewModel = new MovieFormViewModel {
 
                 Genre = Genres
             };
 
-            return View("MovieForm",viewModel);
+            return View("MovieForm", viewModel);
         }
 
 
         // GET: Movies
-        public ActionResult Index()
-        {
-            var movies = _context.Movies.Include(m=>m.Genre).ToList();
+        public ActionResult Index() {
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
 
             return View(movies);
-           
+
         }
 
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save(Movie movie)
-        {
+        public ActionResult Save(Movie movie) {
 
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new MovieFormViewModel(movie)
-                {
+            if (!ModelState.IsValid) {
+                var viewModel = new MovieFormViewModel(movie) {
                     Genre = _context.Genres.ToList()
                 };
 
@@ -68,15 +59,10 @@ namespace POC.Controllers
             }
 
 
-            if (movie.Id == 0)
-            {
+            if (movie.Id == 0) {
                 movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
-            }
-
-            
-            else
-            {
+            } else {
                 var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
                 movieInDb.Name = movie.Name;
                 movieInDb.DateReleased = movie.DateReleased;
@@ -85,11 +71,8 @@ namespace POC.Controllers
 
 
             }
-
-
-            _context.SaveChanges();
-
-            return RedirectToAction("Index","Movies");
+           _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
 
         }
 
@@ -97,21 +80,19 @@ namespace POC.Controllers
 
 
 
-        public ActionResult Edit(int id)
-        {
+        public ActionResult Edit(int id) {
             var movies = _context.Movies.SingleOrDefault(c => c.Id == id);
 
             if (movies == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel(movies)
-            {
-               
+            var viewModel = new MovieFormViewModel(movies) {
+
                 Genre = _context.Genres.ToList()
 
             };
 
-            return View("MovieForm",viewModel);
+            return View("MovieForm", viewModel);
         }
     }
 }
