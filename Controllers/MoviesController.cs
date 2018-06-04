@@ -38,7 +38,7 @@ namespace POC.Controllers {
 
         public ViewResult Index()
         {
-            return View();    
+            return View("List");    
         }
 
 
