@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Net;
 using System.Web.Http;
 using AutoMapper;
@@ -22,7 +23,7 @@ namespace POC.Controllers.Api
         //GET /api/Movies
         public IEnumerable<MovieDto> GetMovies()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            return _context.Movies.Include(m=>m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
         }
 
         //GET /api/Movies/1
@@ -51,11 +52,9 @@ namespace POC.Controllers.Api
 
             movieDto.Id = movie.Id;
             return Created(new Uri(Request.RequestUri + "/" + movie.Id), movieDto);
-
-
         }
         
-        ////PUT /api/movies/1
+        //PUT /api/movies/1
         [HttpPut]
         public void UpdateMovie(int id, MovieDto movieDto)
         {
