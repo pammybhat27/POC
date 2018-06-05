@@ -38,7 +38,11 @@ namespace POC.Controllers {
 
         public ViewResult Index()
         {
+            if(User.IsInRole("CanManageMovies"))
             return View("List");    
+
+            return View("ReadOnlyList");
+
         }
 
 
