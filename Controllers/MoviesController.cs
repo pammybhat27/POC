@@ -23,7 +23,7 @@ namespace POC.Controllers {
         }
 
 
-        [Authorize(Roles = "CanManageMovies")]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New() {
             var Genres = _context.Genres.ToList();
 
@@ -39,7 +39,7 @@ namespace POC.Controllers {
 
         public ViewResult Index()
         {
-            if(User.IsInRole("CanManageMovies"))
+            if(User.IsInRole(RoleName.CanManageMovies))
             return View("List");    
 
             return View("ReadOnlyList");
