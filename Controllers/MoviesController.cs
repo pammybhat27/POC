@@ -23,6 +23,7 @@ namespace POC.Controllers {
         }
 
 
+        [Authorize(Roles = "CanManageMovies")]
         public ActionResult New() {
             var Genres = _context.Genres.ToList();
 
