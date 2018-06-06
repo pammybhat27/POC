@@ -104,3 +104,4 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\AutoMapper.dll
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\AutoMapper.xml
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.SeedUsers.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddDrivingLicenseToApplicationUser.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingPhoneToUser.resources
