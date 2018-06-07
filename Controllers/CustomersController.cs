@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Web;
 using System.Web.Mvc;
 using POC.Models;
@@ -18,12 +19,20 @@ namespace POC.Controllers
         {
             _context = new ApplicationDbContext();
         }
-        // GET: Customers
-        public ActionResult Index()
-        {
-            var customers = _context.Customers.Include(m =>m.MembershipType).ToList();
 
-            return View(customers);
+
+        // GET: Customers
+        public ViewResult Index()
+        {
+            //if (MemoryCache.Default["Genres"] == null)
+            //{
+            //    MemoryCache.Default["Genres"] = _context.Genres.ToList();
+            //}
+
+            //var genres = MemoryCache.Default["Genres"] as IEnumerable<Genre>;
+            ////var customers = _context.Customers.Include(m =>m.MembershipType).ToList();
+
+            return View();
         }
 
 
