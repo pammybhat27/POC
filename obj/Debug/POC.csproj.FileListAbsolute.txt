@@ -110,3 +110,4 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\Glimpse.AspNet.
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\Glimpse.Core.dll
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\Glimpse.EF6.dll
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\Glimpse.Mvc5.dll
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingNewPropertytoMovie.resources
