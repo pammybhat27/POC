@@ -28,6 +28,7 @@ namespace POC {
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap-lumen.css",
+                "~/Content/bootstrap-theme.css",
                 "~/Content/typeahead.css",
                 "~/Content/datatables/css/datatables.bootstrap.css",
                 "~/Content/toastr.css",
