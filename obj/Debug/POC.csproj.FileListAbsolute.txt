@@ -111,3 +111,4 @@ C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migra
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddDrivingLicenseToApplicationUser.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingPhoneToUser.resources
 C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\obj\Debug\POC.Migrations.AddingNewPropertytoMovie.resources
+C:\Users\pammy\Documents\Visual Studio 2015\Projects\POC\POC\bin\Elmah.dll
