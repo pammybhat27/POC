@@ -21,9 +21,20 @@ namespace POC.Controllers.Api
 
 
         //GET /api/Movies
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies(string query = null)
         {
-            return _context.Movies.Include(m=>m.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
+            //Display the movies only if they are > 0 
+            var movieQuery = _context.Movies
+                .Include(c => c.Genre).Where(c=>c.NumberAvailable > 0);
+            
+            if (!String.IsNullOrWhiteSpace(query))
+                movieQuery = movieQuery.Where(c => c.Name.Contains(query));
+
+            var movieDtos    =   movieQuery
+                                .ToList()
+                               .Select(Mapper.Map<Movie, MovieDto>);
+
+            return Ok(movieDtos);
         }
 
         //GET /api/Movies/1
