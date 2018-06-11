@@ -101,11 +101,11 @@
                         data: vm
                     })
                     .done(function() {
-
+                        toastr.success("Rental suceessfully recorded ");
                     })
                     .fail(function() {
 
-
+                        toastr.error("No recording of rentals");
                     });
             });
 

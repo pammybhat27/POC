@@ -17,16 +17,15 @@ namespace POC.Controllers.Api
         {
             _context = new ApplicationDbContext();
         }
-
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDto newRental)
         {
             var customer = _context.Customers.Single(
                 c => c.Id == newRental.CustomerId);
-            
+
             var movies = _context.Movies.Where(
                 m => newRental.MovieIds.Contains(m.Id)).ToList();
-            
+
             foreach (var movie in movies)
             {
                 if (movie.NumberAvailable == 0)
@@ -41,15 +40,12 @@ namespace POC.Controllers.Api
                     DateRented = DateTime.Now
                 };
 
-                _context.Rentals.Add(rental);              
+                _context.Rentals.Add(rental);
             }
 
             _context.SaveChanges();
 
             return Ok();
-
-
-
         }
 
     }
