@@ -35,7 +35,7 @@
     <script>
         $(document).ready(function() {
             var vm = {
-                movieIds:[]
+                movieIds: []
 
             }
 
@@ -58,7 +58,7 @@
                     source: customers
 
                 }).on("typeahead:select",
-                function(e,customer) {
+                function(e, customer) {
                     vm.customerId = customer.id;
 
                 });
@@ -73,8 +73,6 @@
             });
 
 
-
-
             $('#movie').typeahead({
                     minLength: 2,
                     highlight: true
@@ -85,19 +83,31 @@
                     source: movies
 
                 }).on("typeahead:select",
-                function(e,movie) {
+                function(e, movie) {
                     $('#movies').append("<li class ='list-group-item'>" + movie.name + "</li>");
                     //vm.customerId = customer.id;
-                    $('#movie').typeahead("val","");
+                    $('#movie').typeahead("val", "");
 
                     vm.movieIds.push(movie.id);
                 });
 
 
+            $("#newRental").submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                        url: "/api/newRentals",
+                        method: "post",
+                        data: vm
+                    })
+                    .done(function() {
+
+                    })
+                    .fail(function() {
 
 
-
-
+                    });
+            });
 
 
         });
