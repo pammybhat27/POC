@@ -11,7 +11,7 @@
         <label>Customer</label>
         
        <div class ="tt-container"> 
-               <input id="customer" type="text" value="" class="form-control" />
+               <input id="customer" required type="text" value="" class="form-control" />
            
            </div>
     </div>
@@ -32,6 +32,7 @@
 </form> 
 @section scripts
 {
+    @Scripts.Render("~/bundles/jqueryval")
     <script>
         $(document).ready(function() {
             var vm = {
@@ -91,23 +92,30 @@
                     vm.movieIds.push(movie.id);
                 });
 
+            $("#newRental").validate({
+                submitHandler: function() {
+                    e.preventDefault();
 
-            $("#newRental").submit(function(e) {
-                e.preventDefault();
+                    $.ajax({
+                            url: "/api/newRentals",
+                            method: "post",
+                            data: vm
+                        })
+                        .done(function() {
+                            toastr.success("Rental suceessfully recorded ");
+                        })
+                        .fail(function() {
 
-                $.ajax({
-                        url: "/api/newRentals",
-                        method: "post",
-                        data: vm
-                    })
-                    .done(function() {
-                        toastr.success("Rental suceessfully recorded ");
-                    })
-                    .fail(function() {
+                            toastr.error("No recording of rentals");
+                        });
 
-                        toastr.error("No recording of rentals");
-                    });
+
+                }
+
+
             });
+
+         
 
 
         });
